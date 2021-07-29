@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 from matplotlib import animation
 from scipy.integrate import odeint
 from matplotlib import cm
-from numpy.linalg import norm
 
 a = 20000
 b = 0.002
@@ -55,5 +54,4 @@ def anim(i):
 plt.axis("off")
 
 anim = animation.FuncAnimation(fig, anim, frames=len(t), blit=True, init_func=init)
-#anim.save("ballsInSphere.mp4", fps=60, dpi=200, savefig_kwargs=dict(facecolor=bgColor))
-plt.show()
+anim.save("ballsInSphere.mp4", fps=60, dpi=200, savefig_kwargs=dict(facecolor=bgColor))
